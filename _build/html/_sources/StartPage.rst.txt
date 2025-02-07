@@ -1,7 +1,0 @@
-StartPage module
-================
-
-.. automodule:: StartPage
-   :members:
-   :undoc-members:
-   :show-inheritance:

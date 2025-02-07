@@ -1,7 +1,0 @@
-Enemy Factory module
-====================
-
-.. automodule:: Enemy Factory
-   :members:
-   :undoc-members:
-   :show-inheritance:
