@@ -55,7 +55,9 @@ Pac-Man-Clone/
 │── Views/
 │   ├── Settings.py        # Game settings (screen size, colors, etc.)
 │   ├── maze.py            # Random maze generator
-│── Assets/                # Image and sound assets
+│── Assets/                # Image assets
+│── sounds/                # Game sound files
+│── old/                   # Archive for unused/older project files
 │── StartPage.py           # Game start menu
 │── README.md              # This file
 ```
