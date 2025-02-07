@@ -1,0 +1,7 @@
+Play module
+===========
+
+.. automodule:: Play
+   :members:
+   :undoc-members:
+   :show-inheritance:

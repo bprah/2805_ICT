@@ -1,0 +1,7 @@
+2805_ICT_Assignment_1
+=====================
+
+.. toctree::
+   :maxdepth: 4
+
+   conf

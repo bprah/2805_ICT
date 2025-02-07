@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enemy module &mdash; 2805ICT Assignment  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> 2805ICT Assignment
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Enemy module</a></li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">2805ICT Assignment</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Enemy module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/Enemy.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-Enemy">
+<span id="enemy-module"></span><h1>Enemy module<a class="headerlink" href="#module-Enemy" title="Permalink to this headline"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="Enemy.Enemy">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">Enemy.</span></span><span class="sig-name descname"><span class="pre">Enemy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">window</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">position</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Enemy.Enemy" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Handles the Ghosts within the game</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="Enemy.Enemy.BFS">
+<span class="sig-name descname"><span class="pre">BFS</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Enemy.Enemy.BFS" title="Permalink to this definition"></a></dt>
+<dd><p>When called returns a list with the shortest path to the player based on a Breadth First Search
+:param start: This is the start position of the enemy in a list containing the X&amp;Y co-ordinates as integers</p>
+<blockquote>
+<div><p>eg [1,1]</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>target</strong> – This is the current position of the player in a list containing the X&amp;Y co-ordinates as integers
+eg [1,1]</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A list containing cells in list format (list within a list) which when followed will give the shortest
+path to the player. Eg [[x1,y1],[x2,y2],etc]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Enemy.Enemy.can_move">
+<span class="sig-name descname"><span class="pre">can_move</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Enemy.Enemy.can_move" title="Permalink to this definition"></a></dt>
+<dd><p>Checks that the enemy is within the bounds of the maze then checks if their movement is positive.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>True : if able to move
+False: if not able to move.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Enemy.Enemy.draw">
+<span class="sig-name descname"><span class="pre">draw</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Enemy.Enemy.draw" title="Permalink to this definition"></a></dt>
+<dd><p>Displays the enemy in the game window when called based on color, position and radius.
+:return:</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Enemy.Enemy.find_next_cell">
+<span class="sig-name descname"><span class="pre">find_next_cell</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Enemy.Enemy.find_next_cell" title="Permalink to this definition"></a></dt>
+<dd><p>Determines the next cell to move to get to the player
+:return:</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Enemy.Enemy.get_path_direction">
+<span class="sig-name descname"><span class="pre">get_path_direction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Enemy.Enemy.get_path_direction" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A vector as a tuple containing the x &amp; y direction eg (x_direction, y_direction)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Enemy.Enemy.get_pixel_position">
+<span class="sig-name descname"><span class="pre">get_pixel_position</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Enemy.Enemy.get_pixel_position" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the pixel position of the Ghost
+:return: Vector tuple: (X_position , Y_position)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Enemy.Enemy.get_random_direction">
+<span class="sig-name descname"><span class="pre">get_random_direction</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Enemy.Enemy.get_random_direction" title="Permalink to this definition"></a></dt>
+<dd><p>Gives a random direction to the enemy when called
+:return: A Vector as a  Tuple: (x_direction, y_direction)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Enemy.Enemy.move">
+<span class="sig-name descname"><span class="pre">move</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Enemy.Enemy.move" title="Permalink to this definition"></a></dt>
+<dd><p>Sets the movement type of the Enemy based on personality</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Enemy.Enemy.set_colour">
+<span class="sig-name descname"><span class="pre">set_colour</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Enemy.Enemy.set_colour" title="Permalink to this definition"></a></dt>
+<dd><p>Returns color based on number assigned to enemy.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>RGB values for the color as a tuple eg RED = (255, 0, 0)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Enemy.Enemy.set_personality">
+<span class="sig-name descname"><span class="pre">set_personality</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Enemy.Enemy.set_personality" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a string representing the personality of the enemy based on the number it has been assigned.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>String based on personality ie “Random”, “Seek”</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Enemy.Enemy.set_speed">
+<span class="sig-name descname"><span class="pre">set_speed</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Enemy.Enemy.set_speed" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Enemy.Enemy.set_target">
+<span class="sig-name descname"><span class="pre">set_target</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Enemy.Enemy.set_target" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Enemy.Enemy.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Enemy.Enemy.update" title="Permalink to this definition"></a></dt>
+<dd><p>Updates whether the enemy can move as well as the grid position based on pixel position</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, Blake Jones, Jeremy McGahey, Petar Vidakovic, Brandon Prahaladh.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
